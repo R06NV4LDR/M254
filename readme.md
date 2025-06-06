@@ -20,3 +20,10 @@
 - Systemerfassung (HR, IT)
 - Führung durch die ersten Tage
 - Einarbeitung
+
+
+## 2025-06-06 
+
+- Camunda 
+- Flowable
+- BPMN
