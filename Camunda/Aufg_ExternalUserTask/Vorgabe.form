@@ -1,0 +1,54 @@
+{
+  "components": [
+    {
+      "values": [
+        {
+          "label": "task.complete aufrufen",
+          "value": "1"
+        },
+        {
+          "label": "task.bpmn_error aufrufen",
+          "value": "2"
+        },
+        {
+          "label": "task.failure aufrufen",
+          "value": "3"
+        },
+        {
+          "label": "raise Exception()",
+          "value": "4"
+        },
+        {
+          "label": "Kurze Schleife durchführen",
+          "value": "-999"
+        },
+        {
+          "label": "Lange Schleife durchführen",
+          "value": "-50000"
+        },
+        {
+          "label": "not implemented value",
+          "value": "888"
+        }
+      ],
+      "label": "Verlangte Erledigung",
+      "type": "radio",
+      "layout": {
+        "row": "Row_1a9e5xy",
+        "columns": null
+      },
+      "id": "Field_0t4alvc",
+      "key": "vorgabe",
+      "defaultValue": "value"
+    }
+  ],
+  "type": "default",
+  "id": "VorgabeForm",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.26.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.21.0",
+  "schemaVersion": 16
+}

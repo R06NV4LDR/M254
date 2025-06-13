@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_09tu12l" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.26.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.21.0">
+  <bpmn:collaboration id="Collaboration_0xrg8kl">
+    <bpmn:participant id="Participant_1all8vt" processRef="Process_1lggnvk" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_1lggnvk" name="External Task" isExecutable="true" camunda:historyTimeToLive="180">
+    <bpmn:startEvent id="StartEvent_1" camunda:formRef="VorgabeForm" camunda:formRefBinding="latest">
+      <bpmn:outgoing>Flow_1cv2zdw</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:endEvent id="Event_06etjpj">
+      <bpmn:incoming>Flow_1idtekk</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:serviceTask id="SetzeVariablen" name="Setze Variablen" camunda:type="external" camunda:topic="SetzeVariablenTopic">
+      <bpmn:extensionElements>
+        <camunda:errorEventDefinition id="ErrorEventDefinition_1eyzm5u" errorRef="Error_1lbvz7c" expression="GlobalError01 Throw Expression" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1cv2zdw</bpmn:incoming>
+      <bpmn:outgoing>Flow_0ki9oyu</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:userTask id="Activity_15d195i" name="Anzeige Variablen" camunda:assignee="demo">
+      <bpmn:incoming>Flow_0ki9oyu</bpmn:incoming>
+      <bpmn:outgoing>Flow_1idtekk</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="Event_0v0kv9a">
+      <bpmn:incoming>Flow_1bw6s1s</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:userTask id="Activity_10uhwjm" name="Fehler aufgetreten" camunda:assignee="demo">
+      <bpmn:incoming>Flow_0q00htp</bpmn:incoming>
+      <bpmn:outgoing>Flow_1bw6s1s</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Activity_1qexfro" name="Das Zählen wurde abgebrochen" camunda:assignee="demo">
+      <bpmn:incoming>Flow_1nhoxv3</bpmn:incoming>
+      <bpmn:outgoing>Flow_0w0g5dp</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="Event_04cuqox">
+      <bpmn:incoming>Flow_0w0g5dp</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:boundaryEvent id="Event_1isp86z" name="BPMN-Fehler" attachedToRef="SetzeVariablen">
+      <bpmn:outgoing>Flow_0q00htp</bpmn:outgoing>
+      <bpmn:errorEventDefinition id="ErrorEventDefinition_0tr3g0h" errorRef="Error_1eip70c" camunda:errorCodeVariable="FehlerCodeVariable" camunda:errorMessageVariable="FehlerMsgVariable" />
+    </bpmn:boundaryEvent>
+    <bpmn:boundaryEvent id="StopCounting" name="Stop Counting" attachedToRef="SetzeVariablen">
+      <bpmn:outgoing>Flow_1nhoxv3</bpmn:outgoing>
+      <bpmn:signalEventDefinition id="SignalEventDefinition_06ano9j" signalRef="Signal_3qvi44s" />
+    </bpmn:boundaryEvent>
+    <bpmn:sequenceFlow id="Flow_1cv2zdw" sourceRef="StartEvent_1" targetRef="SetzeVariablen" />
+    <bpmn:sequenceFlow id="Flow_1idtekk" sourceRef="Activity_15d195i" targetRef="Event_06etjpj" />
+    <bpmn:sequenceFlow id="Flow_0ki9oyu" sourceRef="SetzeVariablen" targetRef="Activity_15d195i" />
+    <bpmn:sequenceFlow id="Flow_1bw6s1s" sourceRef="Activity_10uhwjm" targetRef="Event_0v0kv9a" />
+    <bpmn:sequenceFlow id="Flow_0q00htp" sourceRef="Event_1isp86z" targetRef="Activity_10uhwjm" />
+    <bpmn:sequenceFlow id="Flow_1nhoxv3" sourceRef="StopCounting" targetRef="Activity_1qexfro" />
+    <bpmn:sequenceFlow id="Flow_0w0g5dp" sourceRef="Activity_1qexfro" targetRef="Event_04cuqox" />
+  </bpmn:process>
+  <bpmn:error id="Error_1eip70c" name="ErrorReferenz" errorCode="BPMN_ERROR_CODE" camunda:errorMessage="BPMN_ERROR_MSG" />
+  <bpmn:signal id="Signal_3qvi44s" name="StopCountingSignal" />
+  <bpmn:error id="Error_1lbvz7c" name="GlobalError01Name" errorCode="GlobalError01Code" camunda:errorMessage="GlobalError01 Message" />
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_0xrg8kl">
+      <bpmndi:BPMNShape id="Participant_1all8vt_di" bpmnElement="Participant_1all8vt" isHorizontal="true">
+        <dc:Bounds x="129" y="90" width="600" height="370" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="192" y="152" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_06etjpj_di" bpmnElement="Event_06etjpj">
+        <dc:Bounds x="612" y="152" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_09dkx6e_di" bpmnElement="SetzeVariablen">
+        <dc:Bounds x="280" y="130" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_10vrmla_di" bpmnElement="Activity_15d195i">
+        <dc:Bounds x="440" y="130" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0v0kv9a_di" bpmnElement="Event_0v0kv9a">
+        <dc:Bounds x="572" y="272" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_11l2muf_di" bpmnElement="Activity_10uhwjm">
+        <dc:Bounds x="410" y="250" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0kl0i4w_di" bpmnElement="Activity_1qexfro">
+        <dc:Bounds x="370" y="360" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_04cuqox_di" bpmnElement="Event_04cuqox">
+        <dc:Bounds x="522" y="382" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_03orivy_di" bpmnElement="Event_1isp86z">
+        <dc:Bounds x="322" y="192" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="366" y="213" width="68" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1nfwp6d_di" bpmnElement="StopCounting">
+        <dc:Bounds x="282" y="192" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="205" y="213" width="70" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1cv2zdw_di" bpmnElement="Flow_1cv2zdw">
+        <di:waypoint x="228" y="170" />
+        <di:waypoint x="280" y="170" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1idtekk_di" bpmnElement="Flow_1idtekk">
+        <di:waypoint x="540" y="170" />
+        <di:waypoint x="612" y="170" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ki9oyu_di" bpmnElement="Flow_0ki9oyu">
+        <di:waypoint x="380" y="170" />
+        <di:waypoint x="440" y="170" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1bw6s1s_di" bpmnElement="Flow_1bw6s1s">
+        <di:waypoint x="510" y="290" />
+        <di:waypoint x="572" y="290" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0q00htp_di" bpmnElement="Flow_0q00htp">
+        <di:waypoint x="340" y="228" />
+        <di:waypoint x="340" y="290" />
+        <di:waypoint x="410" y="290" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1nhoxv3_di" bpmnElement="Flow_1nhoxv3">
+        <di:waypoint x="300" y="228" />
+        <di:waypoint x="300" y="400" />
+        <di:waypoint x="370" y="400" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0w0g5dp_di" bpmnElement="Flow_0w0g5dp">
+        <di:waypoint x="470" y="400" />
+        <di:waypoint x="522" y="400" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
