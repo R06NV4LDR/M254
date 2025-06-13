@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e048001-a515-400c-aab6-be167a90de5e" name="Changes" comment="External Task started" />
+    <list default="true" id="6e048001-a515-400c-aab6-be167a90de5e" name="Changes" comment="External Task started">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +26,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.ExternalTaskBasis.executor": "Run",
     "Python.ExternalTask_DoWork.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -35,6 +38,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -82,6 +86,11 @@
       <workItem from="1749803127529" duration="75000" />
       <workItem from="1749803217341" duration="762000" />
       <workItem from="1749804412476" duration="579000" />
+      <workItem from="1749805601629" duration="211000" />
+      <workItem from="1749805838684" duration="244000" />
+      <workItem from="1749806165662" duration="49000" />
+      <workItem from="1749806238775" duration="37000" />
+      <workItem from="1749806361213" duration="316000" />
     </task>
     <task id="LOCAL-00001" summary="External Task started">
       <option name="closed" value="true" />
@@ -100,5 +109,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="External Task started" />
     <option name="LAST_COMMIT_MESSAGE" value="External Task started" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Camunda$ExternalTaskBasis.coverage" NAME="ExternalTaskBasis Coverage Results" MODIFIED="1749806748485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Aufg_ExternalTaskBasis" />
   </component>
 </project>

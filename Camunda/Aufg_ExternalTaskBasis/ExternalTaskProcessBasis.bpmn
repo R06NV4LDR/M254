@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_09tu12l" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.32.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.21.0">
+  <bpmn:collaboration id="Collaboration_0xrg8kl">
+    <bpmn:participant id="Participant_1all8vt" processRef="ExternalTaskBasis" />
+  </bpmn:collaboration>
+  <bpmn:process id="ExternalTaskBasis" name="External Task Basis" isExecutable="true" camunda:historyTimeToLive="180">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_1cv2zdw</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:endEvent id="Event_06etjpj">
+      <bpmn:incoming>Flow_1idtekk</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:serviceTask id="ExterneVerarbeitung" name="Externe Verarbeitung" camunda:type="external" camunda:topic="EinfacherExternerTaskhandler">
+      <bpmn:extensionElements />
+      <bpmn:incoming>Flow_1cv2zdw</bpmn:incoming>
+      <bpmn:outgoing>Flow_0ki9oyu</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:userTask id="Activity_15d195i" name="Anzeige Variablen" camunda:assignee="demo">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="ResultText" label="ResultText" type="string" />
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0ki9oyu</bpmn:incoming>
+      <bpmn:outgoing>Flow_1idtekk</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_1cv2zdw" sourceRef="StartEvent_1" targetRef="ExterneVerarbeitung" />
+    <bpmn:sequenceFlow id="Flow_1idtekk" sourceRef="Activity_15d195i" targetRef="Event_06etjpj" />
+    <bpmn:sequenceFlow id="Flow_0ki9oyu" sourceRef="ExterneVerarbeitung" targetRef="Activity_15d195i" />
+  </bpmn:process>
+  <bpmn:error id="Error_1eip70c" name="ErrorReferenz" errorCode="BPMN_ERROR_CODE" camunda:errorMessage="BPMN_ERROR_MSG" />
+  <bpmn:signal id="Signal_3qvi44s" name="StopCountingSignal" />
+  <bpmn:error id="Error_1lbvz7c" name="GlobalError01Name" errorCode="GlobalError01Code" camunda:errorMessage="GlobalError01 Message" />
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_0xrg8kl">
+      <bpmndi:BPMNShape id="Participant_1all8vt_di" bpmnElement="Participant_1all8vt" isHorizontal="true">
+        <dc:Bounds x="129" y="90" width="600" height="370" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="192" y="152" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_06etjpj_di" bpmnElement="Event_06etjpj">
+        <dc:Bounds x="612" y="152" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_09dkx6e_di" bpmnElement="ExterneVerarbeitung">
+        <dc:Bounds x="280" y="130" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_10vrmla_di" bpmnElement="Activity_15d195i">
+        <dc:Bounds x="440" y="130" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1cv2zdw_di" bpmnElement="Flow_1cv2zdw">
+        <di:waypoint x="228" y="170" />
+        <di:waypoint x="280" y="170" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1idtekk_di" bpmnElement="Flow_1idtekk">
+        <di:waypoint x="540" y="170" />
+        <di:waypoint x="612" y="170" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ki9oyu_di" bpmnElement="Flow_0ki9oyu">
+        <di:waypoint x="380" y="170" />
+        <di:waypoint x="440" y="170" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
