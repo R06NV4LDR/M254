@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6e048001-a515-400c-aab6-be167a90de5e" name="Changes" comment="External Task started">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Onlineshop1.bpmn" beforeDir="false" afterPath="$PROJECT_DIR$/Onlineshop1.bpmn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projekt/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Projekt/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +17,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "R06NV4LDR"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/R06NV4LDR/M254",
+    "accountId": "0ca737e5-32d8-4a1d-a4b6-ea2849bbd1a5"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -23,25 +37,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.ExternalTaskBasis.executor": "Run",
-    "Python.ExternalTask_DoWork.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/ronny/OneDrive/Documents/Obsidian/Vault_111/TBZ/Module/254 - Geschäftsprozesse im eigenen Berufsumfeld beschreiben/Camunda",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.ExternalTaskBasis.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ExternalTask_DoWork.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ronny/OneDrive/Documents/Obsidian/Vault_111/TBZ/Module/254 - Geschäftsprozesse im eigenen Berufsumfeld beschreiben/Camunda&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="ExternalTask_DoWork" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <option name="ENV_FILES" value="" />
@@ -90,7 +104,9 @@
       <workItem from="1749805838684" duration="244000" />
       <workItem from="1749806165662" duration="49000" />
       <workItem from="1749806238775" duration="37000" />
-      <workItem from="1749806361213" duration="316000" />
+      <workItem from="1749806361213" duration="2219000" />
+      <workItem from="1750400254804" duration="263000" />
+      <workItem from="1750414734150" duration="584000" />
     </task>
     <task id="LOCAL-00001" summary="External Task started">
       <option name="closed" value="true" />
