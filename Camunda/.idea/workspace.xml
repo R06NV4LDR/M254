@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e048001-a515-400c-aab6-be167a90de5e" name="Changes" comment="External Task started">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Onlineshop1.bpmn" beforeDir="false" afterPath="$PROJECT_DIR$/Onlineshop1.bpmn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Projekt/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Projekt/readme.md" afterDir="false" />
-    </list>
+    <list default="true" id="6e048001-a515-400c-aab6-be167a90de5e" name="Changes" comment="External Task started" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -108,6 +104,7 @@
       <workItem from="1750400254804" duration="263000" />
       <workItem from="1750414734150" duration="584000" />
       <workItem from="1750425692475" duration="592000" />
+      <workItem from="1755270319113" duration="13000" />
     </task>
     <task id="LOCAL-00001" summary="External Task started">
       <option name="closed" value="true" />
